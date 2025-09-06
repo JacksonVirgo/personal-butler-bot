@@ -29,7 +29,7 @@ export const clientREST = new REST({
 }).setToken(config.DISCORD_TOKEN);
 
 export async function startDiscordBot() {
-  client.on("ready", () => {
+  client.on("clientReady", () => {
     console.log(`Logged in as ${client.user?.tag}!`);
   });
 

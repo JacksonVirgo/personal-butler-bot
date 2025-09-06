@@ -1,1 +1,5 @@
-console.log("Owo World");
+import { startDiscordBot } from "./app/discord/handler";
+
+(async () => {
+  startDiscordBot();
+})();
