@@ -1,0 +1,32 @@
+{
+  "name": "butler",
+  "description": "Utility discord bot for my own personal uses",
+  "scripts": {
+    "start": "node ./build/src/index.js",
+    "build": "tsc",
+    "dev": "nodemon"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "discord.js": "^14.22.1",
+    "dotenv": "^17.2.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "ts-node src/index.ts",
+    "ext": "ts, js"
+  }
+}
